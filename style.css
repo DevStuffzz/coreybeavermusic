@@ -14,10 +14,8 @@ body {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
+  margin: 0 auto;
   padding: 20px;
   background: #081b2954;
   display: flex;
@@ -26,6 +24,18 @@ body {
   z-index: 100;
 }
 
+.navbar {
+  display: flex; /* Display the navbar items in a row */
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+}
 .logo {
   font-size: 25px;
   color: #ededed;
@@ -50,15 +60,17 @@ body {
 /* Home Page */
 
 .home {
-  height: 100vh;
   display: flex;
-  align-items: center;
-  padding: 0 10%;
+  flex-direction: column;
+  margin: 2%;
+  min-height: 90vh; /* Ensure the section takes up at least the full viewport height */
 }
 
 .home-content {
-  max-width: 600px;
+  padding: 1%;
+  flex: 1; /* Allow the content to grow and take up remaining space */
 }
+
 
 .home-content h1 {
   font-size: 56px;
@@ -75,69 +87,26 @@ body {
   font-size: 16px;
 }
 
-.home-sci {
-  position: absolute;
-  bottom: 40px;
-  width: 170px;
-  display: flex;
-  justify-content: space-between;
-}
 
-.home-sci a {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: 2px solid #00abf0;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #00abf0;
-  text-decoration: none;
-  z-index: 1;
-  overflow: hidden;
-  transition: .5s;
-}
-
-.home-sci a:hover {
-  color: #081b29;
-}
-
-.home-sci a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #00abf0;
-  z-index: -1;
-  transition: .5s;
-}
-.home-sci a:hover::before {
-  width: 100%;
-}
 
 /* About Page */
 
 .about-body {
-   background: url("https://raw.githubusercontent.com/DevStuffzz/CoreyBeaver/main/Portfolio/assets/images/me.jpg?token=GHSAT0AAAAAACOLKBUZ772ZJ7MLM5XLCPIUZORYLCQ") no-repeat;
+  background: url("https://raw.githubusercontent.com/DevStuffzz/coreybeavermusic/main/Portfolio/assets/images/me.jpg?token=GHSAT0AAAAAACOLKBUZQDVGFIVK6SFOPAX4ZOSYL4Q") no-repeat;
   background-position: center;
   background-size: cover;
+  width: auto;
+  background-attachment: fixed;
 }
 
 .about {
-  margin-top: 5%;
-  height: 100vh;
   display: flex;
   align-items: center;
   padding: 0 10%;
 }
 
 .about-content {
-  max-width: 600px;
+  width: 100%;
 }
 
 
@@ -156,16 +125,13 @@ body {
 .about-content p {
   background-color: #081b2963;
   padding: 1%;
-  font-size: 16px;
+  font-size: 12, 16;
   font-weight: 600;
   color:#ededed;
 }
 
 .track {
-  margin-top: 5%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
+  height: 50vh;
   padding: 0 10%;
 }
 
@@ -176,47 +142,51 @@ body {
 
 
 .track-content h1 {
-  font-size: 56px;
   font-weight: 700;
   text-align: center;
   color: #00abf0;
+  display: block;
+  text-align: center;
 }
 
 .tracks {
   width: 75%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap; /* Ensure tracks wrap to the next line */
+  justify-content: center; /* Center tracks horizontally */
   margin: 0 auto;
 }
 
 .track-container {
-  margin: 1%;
+  width: calc(33.33% - 2%); /* Calculate width for three columns with a small margin */
+  margin: 1%; /* Add a small margin between track containers */
   text-align: center;
-  text-decoration: none;
 }
 .cover-image {
-  width: 25vw;
-  height: 25%;
+  max-width: 100%; /* Ensure the image doesn't stretch beyond its original size */
+  height: auto; /* Maintain aspect ratio */
 }
 
 
+.home-sci {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
 .purchase {
-  position: relative;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   width: 40px;
   height: 40px;
   background-color: transparent;
   border: 2px solid #00abf0;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 26px;
   color: #00abf0;
   text-decoration: none;
   z-index: 1;
-  overflow: hidden;
   transition: .5s;
 }
 
