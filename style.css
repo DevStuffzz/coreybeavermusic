@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
 
 
+:root {
+  --main-color: #081b29;
+  --secondary: #ff9500;
+  --secondary-active: #d37306;
+
+
+  --accent: #00abf0;
+
+  --light: #ededed;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,16 +19,29 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.extern-link {
+  text-decoration: none;
+  color: var(--secondary);
+
+  transition: all ease 0.5s;
+}
+
+.extern-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--secondary-active);
+}
+
 body {
-  background: #081b29;
-  color: #ededed;
+  background: var(--main-color);
+  color: var(--light);
 }
 
 .header {
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background: #081b2954;
+  background: var(--main-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +54,7 @@ body {
 
 .navbar a {
   font-size: 18px;
-  color: #ededed;
+  color: var(--light);
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
@@ -38,14 +62,14 @@ body {
 }
 .logo {
   font-size: 25px;
-  color: #ededed;
+  color: var(--light);
   text-decoration: none;
   font-weight: 600;
 }
 
 .navbar a {
   font-size: 18px;
-  color: #ededed;
+  color: var(--light);
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
@@ -54,7 +78,7 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-  color: #00abf0;
+  color: var(--accent);
 }
 
 /* Home Page */
@@ -80,7 +104,7 @@ body {
 .home-content h3 {
   font-size: 32px;
   font-weight: 700;
-  color: #00abf0;
+  color: var(--accent);
 }
 
 .home-content p {
@@ -113,21 +137,21 @@ body {
 .about-content h1 {
   font-size: 56px;
   font-weight: 700;
-  color: #00abf0;
+  color: var(--accent);
 }
 
 .about-content h3 {
   font-size: 32px;
   font-weight: 700;
-  color: #00abf0;
+  color: var(--accent);
 }
 
 .about-content p {
-  background-color: #081b2963;
+  background-color: var(--main-color);
   padding: 1%;
   font-size: 12, 16;
   font-weight: 600;
-  color:#ededed;
+  color:var(--light);
 }
 
 .track {
@@ -144,7 +168,7 @@ body {
 .track-content h1 {
   font-weight: 700;
   text-align: center;
-  color: #00abf0;
+  color: var(--accent);
   display: block;
   text-align: center;
 }
@@ -181,17 +205,17 @@ body {
   width: 40px;
   height: 40px;
   background-color: transparent;
-  border: 2px solid #00abf0;
+  border: 2px solid var(--accent);
   border-radius: 50%;
   font-size: 26px;
-  color: #00abf0;
+  color: var(--accent);
   text-decoration: none;
   z-index: 1;
   transition: .5s;
 }
 
 .purchase:hover {
-  border: 2px solid #ededed;
-  color: #ededed;
-  background-color: #00abf0;
+  border: 2px solid var(--light);
+  color: var(--light);
+  background-color: var(--accent);
 }

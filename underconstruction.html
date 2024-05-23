@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppy&display=swap');
+
+        body {
+            font-family: 'Poppy', sans-serif; /* Poppy font */
+            color: #fff; /* Text color */
+            text-align: center;
+            padding: 50px;
+            margin: 0; /* Remove default margin */
+            min-height: 100vh; /* Ensure full viewport height */
+            background: linear-gradient(135deg, #007bff, #00ff8e); /* Gradient background */
+            background-size: 200% 200%; /* Double the size to create space for animation */
+            animation: rotateBackground 20s infinite alternate; /* Background animation */
+        
+            overflow: hidden;
+        }
+
+        @keyframes rotateBackground {
+            0% {
+                background-position: 0% 0%; /* Initial position */
+            }
+            100% {
+                background-position: 100% 100%; /* Final position */
+            }
+        }
+
+        h1 {
+            color: #fff; /* Title color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for title */
+        }
+
+        p {
+            color: #fff; /* Text color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for paragraph */
+        }
+
+        .icon {
+            color: #fff; /* Icon color */
+            font-size: 50px;
+            margin-top: 30px;
+            animation: bounce 1s infinite alternate; /* Add animation */
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Under Construction</h1>
+    <p>This website is currently under construction. Please check back later.</p>
+    <i class='bx bx-buildings icon'></i>
+</body>
+</html>
