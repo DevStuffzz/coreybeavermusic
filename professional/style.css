@@ -60,7 +60,7 @@ section {
 section h2 {
     font-size: 2em; /* Increase heading size for better hierarchy */
     margin-bottom: 30px; /* Add more space below the heading */
-    text-align: center; /* Center align section headings */
+    text-align: left; /* Center align section headings */
 }
 
 .gallery {
@@ -114,4 +114,12 @@ footer {
     header h1 {
         font-size: 1.5em; /* Decrease heading size for smaller screens */
     }
+}
+
+.certifications-list {
+    margin: 0 auto;
+}
+
+.certifications-list a {
+    list-style:circle;
 }
